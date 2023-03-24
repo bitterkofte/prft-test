@@ -14,18 +14,19 @@ const Navbar = () => {
       <NavbarCont>
 
         <NavLeft>
-          <NavLink href={"/"} font={"SofiaBlack"} size={"30px"} pad={"10px"}>bitterkofte</NavLink>
+          <NavLink color='#fbff00' href={"/"} font={"SofiaBlack"} size={"30px"} pad={"10px"}>bitterkofte</NavLink>
         </NavLeft>
 
         <NavRight>
           <NavLink href={"/"} pad={"10px"}>Contact Me</NavLink>
           <GoTo href="assets/HasanTalhaCelik.pdf" 
-                alt="download"
+                alt="alt text"
                 target="_blank"
                 rel="noopener noreferrer"
                 bgc={"#cdcd00"}
-                pad={"10px"}>
-                Download CV
+                pad={"10px"}
+                font={"SofiaBold"}>
+                <span id='d'>Download CV</span>
           </GoTo>
         </NavRight>
 
@@ -53,7 +54,7 @@ const Navbar = () => {
                   bgc={"#cdcd00"}
                   pad={"10px"}
                   font={"SofiaBold"}>
-                  Download CV
+                  <span id='d'>Download CV</span>
             </GoTo>
           </ExtLinks>
           <ExtFoot>
@@ -90,6 +91,7 @@ export default Navbar
 
 const NavbarCont = styled.div`
   width: 100%;
+  position: fixed;
   display: flex;
   background-color: #282828;
   justify-content: space-between;
@@ -103,6 +105,7 @@ const NavLeft = styled.div`
   `
 const NavRight = styled.div`
   display: flex;
+  align-items: center;
   gap: 10px;
   padding: 10px;
   @media(max-width: 700.001px){
@@ -171,8 +174,11 @@ const ExtFoot = styled.div`
   .flex {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
+    /* :hover{
+      color: red;
+    } */
   }
   .copy {
     margin-top: 10px;
@@ -193,15 +199,45 @@ const NavLink = styled(Link)`
     transition: 400ms;
   }
   :hover {
-    color: #666666;
-    transition: 200ms;
+    color: ${({color}) => color || "#666666"};
+    transition: 700ms;
   }
 `
 const GoTo = styled.a`
   text-decoration: none;
-  color: #ffffff;
-  background-color: ${({bgc}) => bgc || "#ffffff00"};
   font-family: ${({font}) => font || "Sofia"};
   font-size: ${({size}) => size || "20px"};
   padding: ${({pad}) => pad || "0px"};
+
+  background-color: #00000000;
+  display: flex;
+	color: #0084ff;
+	position: relative;
+	border: 3px solid #0084ff;
+
+  &:before {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		content: "";
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-color: #0084ff;
+		transform-origin: 0 bottom 0;
+		transform: scaleX(0);
+		transition: .4s ease-out;
+	}
+  &:hover {
+		#d {
+			color: #000000;
+		}
+		&:before {
+			transform: scaleX(1);
+		}
+	}
+  #d {
+    position: relative;
+    transition: .8s ease-out;
+  }
 `
