@@ -57,7 +57,7 @@ const MainMenu = () => {
         <ImgCont>
           <Img src={gif2} fill />
         </ImgCont>
-        <Header>Contact Me</Header>
+        <Header>Contact</Header>
       </GifLink>
 
       <GifDiv grow={10}>
@@ -97,7 +97,8 @@ const MenuContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  max-width: 600px;
+  max-width: 1000px;
+  padding: 40px;
   /* align-content: stretch; */
   /* height: 80vh; */
 `;

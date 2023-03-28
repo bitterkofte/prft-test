@@ -6,6 +6,11 @@ html, body {
   /* background-color: blanchedalmond; */
 }
 
+p, h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+
 @font-face {
   font-family: "SG-Black25";
   src: url('../public/fonts/SharpGrotesk-Black25.otf');

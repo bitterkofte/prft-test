@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React, { useState } from 'react'
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 // import CV from '../public/assets/HasanTalhaCelik.pdf'
 import { ImCross, ImMenu, ImLinkedin, ImGithub, ImMail4 } from "react-icons/im";
 
@@ -14,11 +14,11 @@ const Navbar = () => {
       <NavbarCont>
 
         <NavLeft>
-          <NavLink color='#fbff00' href={"/"} font={"SofiaBlack"} size={"30px"} pad={"10px"}>bitterkofte</NavLink>
+          <NavLink bk color="#fbff00" href={"/"} font={"SofiaBlack"} size={"30px"} pad={"10px"}>bitterkofte</NavLink>
         </NavLeft>
 
         <NavRight>
-          <NavLink href={"/"} pad={"10px"}>Contact Me</NavLink>
+          <NavLink href={"/contact"} pad={"10px"}>Contact Me</NavLink>
           <GoTo href="assets/HasanTalhaCelik.pdf" 
                 alt="alt text"
                 target="_blank"
@@ -198,11 +198,18 @@ const NavLink = styled(Link)`
   :link {
     transition: 400ms;
   }
+  /* :visited{
+    color: #ffffff;
+  } */
   :hover {
     color: ${({color}) => color || "#666666"};
     transition: 700ms;
+    ${({bk}) => bk && css`
+      transition: 700ms;
+      text-shadow: #8501e1 1px 3px 4px;
+    `}
   }
-`
+`;
 const GoTo = styled.a`
   text-decoration: none;
   font-family: ${({font}) => font || "Sofia"};
