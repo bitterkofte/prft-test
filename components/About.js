@@ -9,9 +9,12 @@ const About = () => {
     <Container id='about'>
       <Grid>
         <Title>About</Title>
+        <Flex>
 
         <ImageCon>
+          <div id='frame'>
           <Image src={Me} alt='/' id='img'/>
+          </div>
         </ImageCon>
 
         <Desc>
@@ -25,6 +28,7 @@ const About = () => {
             specific language, but choosing the best tool for the job.
           </p>
         </Desc>
+        </Flex>
       </Grid>
     </Container>
   )
@@ -36,20 +40,30 @@ const Container = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   /* padding: 16px 20px; */
+  height: 100vh;
   @media (min-width: 768px){
     height: 100vh;
   }
 `
 const Grid = styled.div`
   max-width: 1240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+`
+const Flex = styled.div`
+  /* max-width: 1240px; */
   /* margin: auto; */
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   gap: 10px;
-  @media (min-width: 768px){
-    /* display: grid; */
+  @media (max-width: 750px){
+    flex-direction: column;
   }
 
 `
@@ -58,30 +72,33 @@ const Title = styled.div`
   text-transform: uppercase;
   font-size: 30px;
   color:  #8501e1;
-  border: 2px solid #ff0000;
 `
 const ImageCon = styled.div`
-  border: 2px solid #ff0000;
-  /* width: 100%; */
-  /* height: auto; */
-  border-radius: 20px;
   display: flex;
-  /* align-items: center;
-  justify-content: center; */
-  padding: 10px;
-  /* --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); */
-   #img {
-    border-radius: 50px;
-    border: 2px solid #ff0000;
-    width: 50%;
+  align-items: center;
+  justify-content: center;
+  #frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+  }
+  #img {
+    /* border-radius: 50px; */
+    border: 2px solid #bcbcbc;
+    background-color: #e3e3e3;
+    padding: 10px;
+    width: 60%;
     height: auto;
+
+    box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.2);
   }
 `
 const Desc = styled.div`
-  border: 2px solid #ff0000;
+  width: 70%;
+  padding: 25px 40px;
+  box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.2);
+  /* background-color: #ed9d9d; */
+  p{
+    text-align: justify;
+  }
 `

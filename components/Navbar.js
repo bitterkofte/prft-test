@@ -40,19 +40,20 @@ const Navbar = () => {
         <ExtendedContainer visible={navMenu}>
         <Extended>
           <ExtHead>
-            <span style={{color: '#ffffff', fontSize: '30px'}}>Hasan</span>
+            <span>Hasan</span>
             <ImCross onClick={handleNav} className='icon' size={32} color={"#ffffff"}/>
           </ExtHead>
           <ExtLinks>
-            <NavLink href={"/"} font={"SofiaBold"} onClick={() => setNavMenu(false)}>Home</NavLink>
-            <NavLink href={"/about"} font={"SofiaBold"} onClick={() => setNavMenu(false)}>About</NavLink>
-            <NavLink href={"/contact"} font={"SofiaBold"} onClick={() => setNavMenu(false)}>Contact Me</NavLink>
+            <NavLink href={"/"} font={"SofiaBold"} size="30px" onClick={() => setNavMenu(false)}>Home</NavLink>
+            <NavLink href={"/about"} font={"SofiaBold"} size="30px" onClick={() => setNavMenu(false)}>About</NavLink>
+            <NavLink href={"/contact"} font={"SofiaBold"} size="30px" onClick={() => setNavMenu(false)}>Contact Me</NavLink>
             <GoTo href="assets/HasanTalhaCelik.pdf" 
                   alt="alt text"
                   target="_blank"
                   rel="noopener noreferrer"
                   bgc={"#cdcd00"}
                   pad={"10px"}
+                  size="30px"
                   font={"SofiaBold"}>
                   <span id='d'>Download CV</span>
             </GoTo>
@@ -63,19 +64,19 @@ const Navbar = () => {
               href='https://github.com/bitterkofte'
               target='_blank'
               rel='noreferrer'>
-              <ImLinkedin size={32} color={"#ffffff"}/>
+              <ImLinkedin size={32}/>
             </a>
             <a
               href='https://github.com/bitterkofte'
               target='_blank'
               rel='noreferrer'>
-              <ImGithub size={32} color={"#ffffff"}/>
+              <ImGithub size={32}/>
             </a>
             <a
               href='hasantalhahtc@gmail.com'
               target='_blank'
               rel='noreferrer'>
-              <ImMail4 size={32} color={"#ffffff"}/>
+              <ImMail4 size={32}/>
             </a>
             </div>
             <div className='copy'>&copy; Copyright 2023 Hasan Çelik. All rights reserved. • Privacy Policy</div>
@@ -91,6 +92,7 @@ export default Navbar
 
 const NavbarCont = styled.div`
   width: 100%;
+  z-index: 1;
   position: fixed;
   display: flex;
   background-color: #282828;
@@ -156,6 +158,10 @@ const ExtHead = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  font-family: SofiaBlack;
+  font-size: 40px;
+  color: #ffffff;
+  user-select: none;
   /* border: 1px solid #ff0000; */
   .icon {
     cursor: pointer;
@@ -176,20 +182,31 @@ const ExtFoot = styled.div`
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    /* :hover{
-      color: red;
-    } */
+    color: #ffffff;
+    a:link{
+      color: #ffffff;
+      transition: 400ms;
+    }
+    a:visited{
+      color: #ffffff;
+    }
+    a:hover{
+      color: #666666;
+      transition: 400ms;
+    }
   }
   .copy {
     margin-top: 10px;
     color: #ffffff;
     font-size: 10px;
     text-align: center;
+    user-select: none;
   }
 `
 
 const NavLink = styled(Link)`
   text-decoration: none;
+  user-select: none;
   color: #ffffff;
   background-color: ${({bgc}) => bgc || "#ffffff00"};
   font-family: ${({font}) => font || "Sofia"};
@@ -212,6 +229,7 @@ const NavLink = styled(Link)`
 `;
 const GoTo = styled.a`
   text-decoration: none;
+  user-select: none;
   font-family: ${({font}) => font || "Sofia"};
   font-size: ${({size}) => size || "20px"};
   padding: ${({pad}) => pad || "0px"};

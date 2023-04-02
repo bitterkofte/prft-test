@@ -4,6 +4,8 @@ import { Inter } from 'next/font/google'
 import MainMenu from '@component/components/MainMenu'
 import MainPage from '@component/components/MainPage'
 import About from '@component/components/About'
+import Skills from '@component/components/Skills'
+import Projects from '@component/components/Projects'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,6 +21,8 @@ export default function Home() {
       {/* <MainMenu/> */}
       <MainPage/>
       <About/>
+      <Skills/>
+      <Projects/>
     </>
   )
 }

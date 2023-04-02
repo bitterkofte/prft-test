@@ -52,6 +52,9 @@ const Container = styled.div`
   width: 100%;
   height: 100vh;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Entry = styled.div`
@@ -59,15 +62,11 @@ const Entry = styled.div`
   /* max-width: 1240px; */
   width: 100%;
   height: 100%;
-  /* margin-left: auto;
-  margin-right: auto; */
-  /* padding: 10px; */
   justify-content: center;
   align-items: center;
-  @media(max-width: 640px){
-      padding: 40px;
-      /* background-color: aqua; */
-    }
+  @media(max-width: 750px){
+      width: 80%;
+  }
 `;
 
 const Par = styled.p`
