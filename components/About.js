@@ -13,12 +13,12 @@ const About = () => {
 
         <ImageCon>
           <div id='frame'>
-          <Image src={Me} alt='/' id='img'/>
+          <Image src={Me} alt='/' id='img' priority='true'/>
           </div>
         </ImageCon>
 
         <Desc>
-          <p>I specialize in building mobile responsive front-end UI applications
+          <p>I specialize especially in building mobile responsive front-end UI applications
             that connect with API’s and other backend technologies. I’m
             passionate about learning new technologies and understand there is
             more than one way to accomplish a task. Though I am most proficient

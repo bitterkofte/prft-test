@@ -12,7 +12,7 @@ const Skills = () => {
         {Techs.map((i) => {
           return(
             <Skill key={i.id}>
-              <Image src={i.src} id='img' width={100} height={100} draggable="false"/>
+              <Image alt='skill' src={i.src} id='img' width={100} height={100} draggable="false"/>
               <div>{i.name}</div>
             </Skill>
           )

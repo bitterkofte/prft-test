@@ -14,7 +14,7 @@ const Navbar = () => {
       <NavbarCont>
 
         <NavLeft>
-          <NavLink bk color="#fbff00" href={"/"} font={"SofiaBlack"} size={"30px"} pad={"10px"}>bitterkofte</NavLink>
+          <NavLink color="#fbff00" href={"/"} font={"SofiaBlack"} size={"30px"} pad={"10px"}>bitterkofte</NavLink>
         </NavLeft>
 
         <NavRight>

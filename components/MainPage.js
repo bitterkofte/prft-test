@@ -10,7 +10,7 @@ const MainPage = () => {
           <Par>LET'S BUILD SOMETHING TOGETHER</Par>
           <H1>Hi I'm <Span>Hasan</Span></H1>
           <H1>A Front-End Web Developer</H1>
-          <Par alt>
+          <Par $alt>
             I’m focused on building responsive front-end web
             applications integrating back-end technologies.
           </Par>
@@ -74,7 +74,7 @@ const Par = styled.p`
   font-size: 20px;
   letter-spacing: 3px;
   color: #616161;
-  ${props => props.alt && css`
+  ${props => props.$alt && css`
     color: #616161;
     margin: auto;
     @media(min-width: 640px){
