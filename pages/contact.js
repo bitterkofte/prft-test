@@ -14,6 +14,7 @@ export default contact
 
 const Container = styled.div`
   /* margin-top: 100px; */
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;

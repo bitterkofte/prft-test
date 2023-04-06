@@ -18,7 +18,7 @@ const About = () => {
         </ImageCon>
 
         <Desc>
-          <p>I specialize especially in building mobile responsive front-end UI applications
+          <p>I specialize in building mobile responsive front-end UI applications
             that connect with API’s and other backend technologies. I’m
             passionate about learning new technologies and understand there is
             more than one way to accomplish a task. Though I am most proficient
@@ -42,6 +42,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   /* padding: 16px 20px; */
+  /* background-color: #f4ffa0; */
   height: 100vh;
   @media (min-width: 768px){
     height: 100vh;

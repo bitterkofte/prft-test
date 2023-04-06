@@ -2,10 +2,11 @@ import React from 'react'
 import styled, {css} from 'styled-components'
 import { Techs } from '@component/techs'
 import Image from 'next/image'
+import FancyNavigate from './FancyNavigate'
 
 const Skills = () => {
   return (
-    <Container>
+    <Container id='skills'>
       <Grid>
       <Title>SKILLS</Title>
       <Flexbox>
@@ -17,8 +18,8 @@ const Skills = () => {
             </Skill>
           )
         })}
-        
       </Flexbox>
+      <FancyNavigate>See More</FancyNavigate>
       </Grid>
     </Container>
   )
@@ -32,6 +33,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  /* background-color: #97ff97; */
 
   @media (min-width: 768px){
     height: 100vh;
@@ -76,7 +78,7 @@ const Skill = styled.div`
   transition: transform .2s;
   user-select: none;
   :hover {
-    transform: scale(1.2);
+    transform: scale(1.03);
   }
 
   #img {

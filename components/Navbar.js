@@ -36,7 +36,7 @@ const Navbar = () => {
 
       </NavbarCont>
 
-      <DarkBG visible={navMenu}>
+      {/* <DarkBG visible={navMenu}> */}
         <ExtendedContainer visible={navMenu}>
         <Extended>
           <ExtHead>
@@ -44,8 +44,10 @@ const Navbar = () => {
             <ImCross onClick={handleNav} className='icon' size={32} color={"#ffffff"}/>
           </ExtHead>
           <ExtLinks>
-            <NavLink href={"/"} font={"SofiaBold"} size="30px" onClick={() => setNavMenu(false)}>Home</NavLink>
-            <NavLink href={"/about"} font={"SofiaBold"} size="30px" onClick={() => setNavMenu(false)}>About</NavLink>
+            <NavLink href={"/#home"} font={"SofiaBold"} size="30px" onClick={() => setNavMenu(false)}>Home</NavLink>
+            <NavLink href={"/#about"} font={"SofiaBold"} size="30px" onClick={() => setNavMenu(false)}>About</NavLink>
+            <NavLink href={"/#skills"} font={"SofiaBold"} size="30px" onClick={() => setNavMenu(false)}>Skills</NavLink>
+            <NavLink href={"/#projects"} font={"SofiaBold"} size="30px" onClick={() => setNavMenu(false)}>Projects</NavLink>
             <NavLink href={"/contact"} font={"SofiaBold"} size="30px" onClick={() => setNavMenu(false)}>Contact Me</NavLink>
             <GoTo href="assets/HasanTalhaCelik.pdf" 
                   alt="alt text"
@@ -83,7 +85,7 @@ const Navbar = () => {
           </ExtFoot>
         </Extended>
         </ExtendedContainer>
-      </DarkBG>
+      {/* </DarkBG> */}
     </div>
   )
 }
@@ -124,17 +126,18 @@ const NavMenu = styled.div`
     display: none;
   }
 `
-const DarkBG = styled.div`
-  /* display: ${({visible}) => visible ? "block" : "none"}; */
-  /* position: fixed;
-  width: 100%;
-  top: 0;
-  background-color: #00000094;
-  height: 100vh; */
-`
+// const DarkBG = styled.div`
+//   display: ${({visible}) => visible ? "block" : "none"}; */
+//   position: fixed;
+//   width: 100%;
+//   top: 0;
+//   background-color: #00000094;
+//   height: 100vh;
+// `
 const ExtendedContainer = styled.div`
   /* display: inline-flex; */
   position: fixed;
+  z-index: 1;
   top: 0;
   right: ${({visible}) => visible ? "0" : "-100%"};
   height: 100vh;

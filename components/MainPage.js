@@ -16,7 +16,7 @@ const MainPage = () => {
           </Par>
           <Contact>
             <A
-              href='https://github.com/bitterkofte'
+              href='https://www.linkedin.com/in/hasantalhacelik/'
               target='_blank'
               rel='noreferrer'>
               <ImLinkedin size={32}/>

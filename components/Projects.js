@@ -1,27 +1,38 @@
 import React from 'react'
 import styled, {css} from 'styled-components'
-import { Techs } from '@component/techs'
+import { Projs } from '@component/proj'
 import Image from 'next/image'
+import FancyNavigate from './FancyNavigate'
 
 const Projects = () => {
   return (
-    <Container>
+    <Container id='projects'>
       <Grid>
       <Title>PROJECTS</Title>
       <Flexbox>
-        {Techs.map((i) => {
+        {Projs.map((i) => {
           return(
-            <Skill key={i.id}>
-              <Image alt='skill' src={i.src} id='img' width={100} height={100} draggable="false"/>
+            <Project key={i.id}>
+              <Image alt='project' src={i.src} id='img' width={400} height={400} draggable="false"/>
               <div id='flex'>
-                <div id='title'>{i.name}</div>
-                <div id='desc'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</div>
+                <div>
+                  <div id='title'>{i.name}</div>
+                  <div id='desc'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</div>
+                </div>
+                <Materials>
+                  {i.mats.map((m, index) => {
+                    return (
+                      <Mat key={index}>{m}</Mat>
+                    )
+                  })}
+                </Materials>
               </div>
-            </Skill>
+            </Project>
           )
         })}
         
       </Flexbox>
+      <FancyNavigate>And Much More On Github</FancyNavigate>
       </Grid>
     </Container>
   )
@@ -31,23 +42,23 @@ export default Projects
 
 const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @media (min-width: 768px){
-    height: 100vh;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* background-color: #ff7979; */
+  @media (max-width: 768px){
+    margin: 90px 0px;
+    margin-top: 150px;
   }
 `
 const Grid = styled.div`
-  max-width: 1240px;
-  /* height: 100%;
-  background-color: #f8b4f8; */
   display: flex;
   flex-direction: column;
+  /* justify-content: center; */
   align-items: center;
   gap: 50px;
+  
 `
 const Title = styled.div`
   letter-spacing: 3px;
@@ -66,12 +77,13 @@ const Flexbox = styled.div`
   align-items: center;
   gap: 22px;
 `
-const Skill = styled.div`
+const Project = styled.div`
   display: flex;
+  /* position: relative; */
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   gap: 20px;
-  width: 40%;
+  /* width: 40%; */
   min-width: 250px;
   padding: 20px;
   background-color: #ffffff;
@@ -79,12 +91,17 @@ const Skill = styled.div`
   transition: transform .2s;
   user-select: none;
   :hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
   }
-
+  #flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
   #title {
     font-family: SofiaBold;
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 5px;
   }
   #desc {
@@ -92,8 +109,33 @@ const Skill = styled.div`
   }
 
   #img {
-    width: 48px;
+    width: 200px;
     height: auto;
     object-fit: contain;
   }
+
+  @media (max-width: 768px){
+    flex-direction: column;
+    #img{align-self:center;}
+    #flex{gap: 20px;}
+  }
+`
+
+const Materials = styled.div`
+  display: flex;
+  /* justify-content: space-evenly; */
+  align-self: flex-end;
+  gap: 10px;
+  @media (max-width: 768px){
+    /* justify-content: ; */
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+`
+const Mat = styled.div`
+  padding: 3px 5px;
+  color: #3f3f3f;
+  background-color: #e8e8e8;
+  border-radius: 10px;
+  border: 1.5px solid #3f3f3f;
 `
