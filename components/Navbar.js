@@ -14,7 +14,7 @@ const Navbar = () => {
       <NavbarCont>
 
         <NavLeft>
-          <NavLink color="#fbff00" href={"/"} font={"SofiaBlack"} size={"30px"} pad={"10px"}>bitterkofte</NavLink>
+          <NavLink $bk color="#ffffff" href={"/"} font={"SofiaBlack"} size={"30px"} pad={"10px"}>bitterkofte</NavLink>
         </NavLeft>
 
         <NavRight>
@@ -222,11 +222,15 @@ const NavLink = styled(Link)`
     color: #ffffff;
   } */
   :hover {
-    color: ${({color}) => color || "#666666"};
+    color: ${({color}) => color || "#8501e1"};
     transition: 700ms;
-    ${({bk}) => bk && css`
+    ${({$bk}) => $bk && css`
       transition: 700ms;
-      text-shadow: #8501e1 1px 3px 4px;
+      text-shadow:
+        0 0 7px #8501e1,
+        0 0 10px #8501e1,
+        0 0 21px #8501e1,
+        0 0 42px #8501e1;
     `}
   }
 `;
