@@ -18,11 +18,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
 
-        <meta property="og:title" content="Hasan Talha Çelik"/>
+        <meta property="og:title" content="bitterkofte - Hasan Talha Çelik"/>
         <meta property="og:type" content="website" />
         <meta property="og:image" content="../public/assets/bk.svg"/>
         <meta property="og:url" content="https://bitterkofte.vercel.app/"/>
-        <meta name="twitter:card" content="summary_large_image"/>
+
+        <meta property="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:url" content="https://bitterkofte.vercel.app/"/>
+        <meta property="twitter:title" content="Hasan Talha Çelik"/>
+        <meta property="twitter:description" content="Hey, this is my personal website. You can take a look at my portfolio, download my CV and see how you can contact me!"/>
+        <meta property="twitter:image" content="../public/assets/bk.png"/>
       </Head>
       {/* <MainMenu/> */}
       <MainPage/>
