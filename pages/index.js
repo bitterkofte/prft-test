@@ -6,7 +6,6 @@ import MainPage from '@component/components/MainPage'
 import About from '@component/components/About'
 import Skills from '@component/components/Skills'
 import Projects from '@component/components/Projects'
-import MetaThumbnail from '../public/assets/bk-wide.png'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,13 +21,13 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="bitterkofte - Hasan Talha Çelik"/>
         <meta property="og:url" content="https://bitterkofte.vercel.app/"/>
-        <meta property="og:image" content={MetaThumbnail}/>
+        <meta property="og:image" content="https://bitterkofte.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fme.7b703548.jpg&w=640&q=75" />
 
         <meta property="twitter:card" content="summary_large_image"/>
         <meta property="twitter:url" content="https://bitterkofte.vercel.app/"/>
         <meta property="twitter:title" content="Hasan Talha Çelik"/>
         <meta property="twitter:description" content="Hey, this is my personal website. You can take a look at my portfolio, download my CV and see how you can contact me!"/>
-        <meta property="twitter:image" content={MetaThumbnail}/>
+        <meta property="twitter:image" content="" />
       </Head>
       {/* <MainMenu/> */}
       <MainPage/>
