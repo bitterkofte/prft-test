@@ -6,7 +6,7 @@ import MainPage from '@component/components/MainPage'
 import About from '@component/components/About'
 import Skills from '@component/components/Skills'
 import Projects from '@component/components/Projects'
-import MetaThumbnail from '../public/assets/bk.png'
+import MetaThumbnail from '../public/assets/bk-wide.png'
 
 const inter = Inter({ subsets: ['latin'] })
 
