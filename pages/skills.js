@@ -79,8 +79,8 @@ const SC = styled.div`
 
 const Section = styled.div`
   margin-bottom: 80px;
-  border: 2px solid #8501e1;
-  border-radius: 20px;
+  /* border: 2px solid #8501e1;
+  border-radius: 20px; */
   .title{
     font-size: 25px;
     font-family: SofiaBold;
