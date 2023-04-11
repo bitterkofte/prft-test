@@ -19,7 +19,7 @@ const Skills = () => {
           )
         })}
       </Flexbox>
-      <FancyNavigate>See More</FancyNavigate>
+      <FancyNavigate href={"/skills"}>See More</FancyNavigate>
       </Grid>
     </Container>
   )

@@ -6,7 +6,7 @@ import FoF from '../public/assets/404.svg'
 const Blank = () => {
   return (
     <Img>
-      <Image src={FoF} alt='404' id='img' />
+      <Image src={FoF} alt='404' id='img' priority />
     </Img>
   )
 }

@@ -97,6 +97,7 @@ const NavbarCont = styled.div`
   z-index: 1;
   position: fixed;
   display: flex;
+  top: 0;
   background-color: #282828;
   justify-content: space-between;
   align-items: center;  

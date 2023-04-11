@@ -32,7 +32,7 @@ const Projects = () => {
         })}
         
       </Flexbox>
-      <FancyNavigate>And Much More On Github</FancyNavigate>
+      <FancyNavigate type="a" href="https://github.com/bitterkofte?tab=repositories">And Much More On Github</FancyNavigate>
       </Grid>
     </Container>
   )
@@ -44,6 +44,7 @@ const Container = styled.div`
   width: 100%;
   min-height: 100vh;
   display: flex;
+  margin-bottom: 90px;
   /* align-items: center; */
   /* justify-content: center; */
   /* background-color: #ff7979; */
@@ -110,8 +111,11 @@ const Project = styled.div`
 
   #img {
     width: 200px;
+    min-width: 200px;
     height: auto;
-    object-fit: contain;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 14px;
   }
 
   @media (max-width: 768px){
@@ -124,6 +128,7 @@ const Project = styled.div`
 const Materials = styled.div`
   display: flex;
   /* justify-content: space-evenly; */
+  margin-top: 30px;
   align-self: flex-end;
   gap: 10px;
   @media (max-width: 768px){
@@ -136,6 +141,7 @@ const Mat = styled.div`
   padding: 3px 5px;
   color: #3f3f3f;
   background-color: #e8e8e8;
-  border-radius: 10px;
+  border-radius: 8px;
   border: 1.5px solid #3f3f3f;
+  font-size: 13px;
 `
