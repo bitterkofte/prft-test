@@ -105,7 +105,8 @@ const Skill = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 30%;
+  /* width: 30%; */
+  max-width: 350px;
   min-width: 250px;
   padding: 20px;
   border-radius: 20px;

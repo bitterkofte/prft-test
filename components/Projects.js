@@ -17,7 +17,7 @@ const Projects = () => {
               <div id='flex'>
                 <div>
                   <div id='title'>{i.name}</div>
-                  <div id='desc'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</div>
+                  <div id='desc'>{i.desc}</div>
                 </div>
                 <Materials>
                   {i.mats.map((m, index) => {
@@ -80,6 +80,7 @@ const Flexbox = styled.div`
 `
 const Project = styled.div`
   display: flex;
+  max-width: 800px;
   /* position: relative; */
   justify-content: space-between;
   /* align-items: center; */
