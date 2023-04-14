@@ -3,13 +3,14 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styled from 'styled-components'
 import { RxDoubleArrowUp } from 'react-icons/rx';
+import bk from '../public/assets/bk-low.png'
 
 const Footer = () => {
   return (
     <Wrapper>
       <FooterCard>
         <div id='flex'>
-          <Image id='logo' alt='BK' src={'/../public/assets/bk-low.png'} width={400} height={400} />
+          <Image id='logo' alt='BK' src={bk} width={400} height={400} />
           <div id='mid'>
             <div>Hasan Talha Çelik</div>
             <div id='light'>İstanbul, TR</div>
