@@ -2,8 +2,14 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: Sofia;
+  scroll-behavior: smooth !important;
   /* height: 100%; */
   /* background-color: blanchedalmond; */
+}
+
+::selection {
+  color: #ffffff;
+  background-color: #8501e1;
 }
 
 p, h1, h2 {
@@ -19,7 +25,14 @@ p, h1, h2 {
   font-family: "SG-Black20";
   src: url('../public/fonts/SharpGrotesk-Black20.otf');
 }
-
+@font-face {
+  font-family: "SofiaExtraLight";
+  src: url('../public/fonts/Sofia-Pro-ExtraLight\ Az.otf');
+}
+@font-face {
+  font-family: "SofiaLight";
+  src: url('../public/fonts/Sofia-Pro-Light.otf');
+}
 @font-face {
   font-family: "Sofia";
   src: url('../public/fonts/Sofia-Pro-Regular.otf');
