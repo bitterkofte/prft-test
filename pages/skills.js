@@ -8,6 +8,7 @@ const skills = () => {
     <SC>
       <Section>
         <div className='title'>Programming Languages</div>
+        <hr></hr>
         <Flexbox>
           {ProgLangs.map((i) => {
             return(
@@ -75,6 +76,10 @@ const SC = styled.div`
   min-height: 100vh;
   margin-top: 150px;
   /* margin: 100px 0px; */
+  hr {
+    width: 50%;
+    background-color: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0.75), rgba(255, 255, 255, 1));
+  }
 `
 
 const Section = styled.div`

@@ -27,6 +27,9 @@ const Projects = () => {
                   })}
                 </Materials>
               </div>
+              <div className='overlay'>
+                <h1>CODE HERE</h1>
+              </div>
             </Project>
           )
         })}
@@ -92,6 +95,31 @@ const Project = styled.div`
   box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.2);
   transition: transform .2s;
   user-select: none;
+
+  overflow:hidden;
+  position:relative;
+  .overlay{
+    width:100%;
+    height:100%;
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+    top:0;
+    left:0;
+    opacity:0;
+    background-color:rgba(0,0,0,0.5);
+    color: #ffffff;
+    -webkit-transition:all .2s ease-in-out;
+    transition:all .4s ease-in-out;
+    :hover {
+      opacity:1;
+      filter:alpha(opacity=100);
+      backdrop-filter: blur(5px);
+    }
+  }
+
   :hover {
     transform: scale(1.01);
   }
