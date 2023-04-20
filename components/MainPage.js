@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled, {css} from "styled-components";
 import { ImCross, ImMenu, ImLinkedin, ImGithub, ImMail4, ImStackoverflow } from "react-icons/im";
 import { FaTelegram, FaTelegramPlane, FaPhoneAlt } from "react-icons/fa";
+import FancyAlert from './FancyAlert';
 
 const MainPage = () => {
+  const [isAlertVisible, setIsAlertVisible] = useState(false);
+
+  const handleCopyAlert = () => {
+    setIsAlertVisible(true);
+    navigator.clipboard.writeText('+905054539566');
+    console.log('COPIED');
+    setTimeout(() => {
+      setIsAlertVisible(false);
+    }, 2000);
+  }
+
   return (
     <Container id='home'>
       <Entry>
@@ -34,13 +46,14 @@ const MainPage = () => {
               rel='noreferrer'>
               <ImStackoverflow size={32} />
             </A>
-            {/* <A
+            <A
               href='tel:+905054539566'
               target='_blank'
-              rel='noreferrer'>
+              rel='noreferrer'
+              id='phone'>
               <FaPhoneAlt size={32} />
-            </A> */}
-            <FaPhoneAlt id='phone' size={32} onClick={() => {navigator.clipboard.writeText('+905054539566')}}/>
+            </A>
+            <FaPhoneAlt id='desktop-phone' size={32} onClick={handleCopyAlert}/>
             <A
               href='https://t.me/bitterkofte'
               target='_blank'
@@ -54,6 +67,7 @@ const MainPage = () => {
               <ImMail4 size={32}/>
             </A>
           </Contact>
+          {isAlertVisible && <FancyAlert text={"Phone Number is Copied"}/>}
         </div>
       </Entry>
     </Container>
@@ -111,6 +125,11 @@ const Contact = styled.div`
   margin: auto;
   padding: 15px 0;
   #phone {
+    @media(min-width: 640px){
+      display: none;
+    }
+  }
+  #desktop-phone {
     @media(max-width: 640px){
       display: none;
     }
