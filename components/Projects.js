@@ -3,6 +3,7 @@ import styled, {css} from 'styled-components'
 import { Projs } from '@component/proj'
 import Image from 'next/image'
 import FancyNavigate from './FancyNavigate'
+import Link from 'next/link'
 
 const Projects = () => {
   return (
@@ -28,7 +29,11 @@ const Projects = () => {
                 </Materials>
               </div>
               <div className='overlay'>
-                <h1>CODE HERE</h1>
+                <h1>{i.name}</h1>
+                <div className='flex-row'>
+                  <Link id='link' href={i.link}>See the Code</Link>
+                  {i.visit && <Link id='link' href={i.visit}>Visit</Link>}
+                </div>
               </div>
             </Project>
           )
@@ -103,8 +108,10 @@ const Project = styled.div`
     height:100%;
     position:absolute;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 35px;
     overflow:hidden;
     top:0;
     left:0;
@@ -117,6 +124,24 @@ const Project = styled.div`
       opacity:1;
       filter:alpha(opacity=100);
       backdrop-filter: blur(5px);
+    }
+    .flex-row{
+      display: flex;
+      gap: 20px;
+    }
+    h1 {
+      font-size: 50px;
+    }
+    #link {
+      padding: 7px;
+      border: 3px solid #ffffff;
+      text-decoration: none;
+      color: #ffffff;
+      transition: 700ms;
+      :hover{
+        background-color: #57575782;
+        border-radius: 10px;
+      }
     }
   }
 
