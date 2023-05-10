@@ -17,6 +17,15 @@ export const Projs = [
     visit: "https://nextjs-blog2-rouge-eta.vercel.app/"
   },
   {
+    src:'/assets/projects/FoodBase.png',
+    name: 'FoodBase',
+    id: 1,
+    mats: ["nextjs", "tailwind", "firebase", "framer motion", "•••"],
+    desc: "E-commerce website where customers can place orders. Admin can add items to the site. Items and accounts logged in with auth are kept in firebase. Firebase's Authentication, Firestore Datavase, Realtime Database and Storage packages are used to store user information.",
+    link: "https://github.com/bitterkofte/foodbase",
+    visit: "https://foodbase-tr.vercel.app/"
+  },
+  {
     src:'/assets/projects/sample.jpg',
     name: 'Meal Recipes',
     id: 2,
@@ -38,6 +47,6 @@ export const Projs = [
     id: 4,
     mats: ["react-native", "bottom-sheet"],
     desc: "A cryptocurrency tracking application that retrieves information about cryptocurrencies from the API and displays it in the user interface.It also has a bottom sheet that displays more details about cryptocurrencies.",
-    link: ""
+    link: "https://github.com/bitterkofte/crypto-tracker-app"
   },
 ]
