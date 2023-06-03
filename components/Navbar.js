@@ -19,7 +19,7 @@ const Navbar = () => {
 
         <NavRight>
           <NavLink href={"/contact"} pad={"10px"}>Contact Me</NavLink>
-          <GoTo href="assets/HasanTalhaCelik.pdf" 
+          <GoTo href="assets/CV - 04.06.2023.pdf" 
                 alt="alt text"
                 target="_blank"
                 rel="noopener noreferrer"
